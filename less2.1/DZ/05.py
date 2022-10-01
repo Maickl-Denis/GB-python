@@ -9,7 +9,7 @@ num = int(input("Введите число: "))
 first_list = []
 result = []
 
-for i in range(10):
+for i in range(num):
     first_list.append(i)
 
 print(first_list)
