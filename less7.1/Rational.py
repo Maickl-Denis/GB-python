@@ -1,5 +1,6 @@
 import os
 import do
+from logger import operation_logger as logg
 
 
 def original(aktion: int):
@@ -37,8 +38,11 @@ def data(flag: int):
         elif flag == 5 or flag == 8:
             number1 = float(input("Введите число: "))
             number2 = int(input("Введите степень: "))
-    except ValueError:
-        print("Вы ввеели не допустимые символы")
-        data(flag)
+    except:
+        print("Вы ввели не допустимые символы")
+        logg("warning", "введено не допустимое значение", "")
+        input("Нажмите Enter для продолжения...")
+        original(flag)
+
     else:
         return number1, number2

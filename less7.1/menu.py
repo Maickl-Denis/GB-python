@@ -38,7 +38,7 @@ def numeric():
                         "0. Выход\n"))        
     except ValueError:
         print("Вы ввели некоректное значение")
-        return 0
+        return -1
     else:
         return che
         
